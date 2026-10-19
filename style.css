@@ -1,176 +1,189 @@
 /* ============================================================
-   START LIGHT — CSS Simplificado y Didáctico (1º DAW)
+   START LIGHT — CSS Personalizado + Integración Bootstrap (1º DAW)
    ============================================================ */
 
-/* 1. Variables de color y reseteo básico */
+/* 1. Variables de color del tema espacial */
 :root {
   --fondo: #010409;
+  --fondo-orb: #0f172a;
   --morado: #7e22ce;
+  --morado-card: #110726;
   --cian: #00f0ff;
   --texto: #f1f5f9;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; padding: 0; 
-}
-
+/* 2. Reseteo y fondo global */
 body {
-  font-family: sans-serif;
-  background: var(--fondo) radial-gradient(circle at 50% 20%, #1e1040, var(--fondo) 70%);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: var(--fondo) radial-gradient(circle at 50% 20%, #1e1040, var(--fondo) 75%);
   color: var(--texto);
-  text-align: center;
-  line-height: 1.5;
+  min-height: 100vh;
 }
 
-/* 2. Barra de navegación */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-  margin: 15px auto;
-  padding: 10px 20px;
-  border: 1px solid;
-  border-radius: 30px;
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
-}
-.logo { 
-  display: flex; 
-  align-items: center; 
-  gap: 8px;
-}
-.logo span, nav a:hover { 
-  color: var(--cian); 
-}
-.logo-orb { 
-  width: 12px; height: 12px; 
-  background: var(--cian); 
-  border-radius: 50%; 
-}
-nav a { 
-  color: var(--texto); 
-  text-decoration: none; 
-  margin-left: 15px; 
+/* Utilidad de color cian */
+.text-cyan {
+  color: var(--cian);
 }
 
-/* 3. Botones unificados */
-.btn-nav, .btn-primary, .btn-plan {
-  padding: 8px 16px;
-  border-radius: 20px;
+/* 3. Barra de navegación flotante tipo píldora */
+.custom-navbar {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: rgba(1, 4, 9, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--cian);
+  border-radius: 35px;
+  box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
+  transition: all 0.3s ease;
+}
+
+.logo-orb {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: var(--cian);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--cian);
+}
+
+.custom-navbar .nav-link {
+  transition: color 0.2s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: var(--cian) !important;
+}
+
+/* Icono menú hamburguesa en cian */
+.navbar-toggler-icon {
+  filter: invert(75%) sepia(80%) saturate(1500%) hue-rotate(140deg);
+}
+
+/* 4. Botones */
+.btn-nav,
+.btn-primary-custom,
+.btn-plan {
+  padding: 8px 20px;
+  border-radius: 600px; /*Esto se cambiará por el estilo en línea*/
+  font-weight: 600;
   border: none;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn-nav, .btn-primary, .plan-card.destacada .btn-plan {
-   background: var(--cian); 
-   color: #000; 
-  }
-
-.btn-plan { 
-  background: var(--morado); 
-  color: #fff; 
-  width: 100%; 
-  margin-top: 10px; 
+.btn-nav,
+.btn-primary-custom,
+.plan-card.destacada .btn-plan {
+  background: var(--cian);
+  color: #000;
 }
 
-/* 4. Portada / Hero con orbe central */
-.hero {
-  display: 
-  flex; justify-content: 
-  center; padding: 40px 20px; 
+.btn-nav:hover,
+.btn-primary-custom:hover,
+.plan-card.destacada .btn-plan:hover {
+  background: #38f9d7;
+  color: #000;
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+  transform: translateY(-2px);
 }
+
+.btn-plan {
+  background: var(--morado);
+  color: #fff;
+  width: 100%;
+}
+
+.btn-plan:hover {
+  background: #9333ea;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(126, 34, 206, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 5. Portada / Hero con orbe central adaptativo */
 .hero-orb {
-  width: 340px; 
-  height: 340px; 
-  border-radius: 50%; 
+  width: min(340px, 86vw);
+  height: min(340px, 86vw);
+  border-radius: 50%;
   border: 2px solid var(--cian);
   background: radial-gradient(circle at 35% 30%, #1e3a8a, var(--fondo));
-  box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  padding: 20px;
-}
-.tag { 
-  font-size: 0.8rem; 
-  color: var(--cian); 
-  border: 1px solid var(--cian); 
-  padding: 2px 8px; border-radius: 10px; 
-  margin-bottom: 8px; 
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
 }
 
-.hero-orb h1 { 
-  font-size: 1.6rem; 
-  margin-bottom: 8px; 
-}
-.hero-orb p { 
-  font-size: 0.85rem; 
-  color: #94a3b8; 
-  margin-bottom: 14px; 
-}
-.status-live { 
-  font-size: 0.75rem; 
-  color: #10b981; 
-  margin-top: 12px; 
+.tag {
+  font-size: 0.78rem;
+  color: var(--cian);
+  border: 1px solid var(--cian);
+  padding: 3px 10px;
+  border-radius: 12px;
 }
 
-/* 5. Rejilla de planes */
-.planes-section { 
-  padding: 30px 20px; 
+.hero-desc {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.planes-grid { 
-  display: flex; 
-  justify-content: center; 
-  gap: 20px; 
-  flex-wrap: wrap; 
-  margin-top: 20px; 
+
+.status-live {
+  font-size: 0.78rem;
+  color: #10b981;
 }
+
+/* 6. Rejilla y tarjetas de planes */
 .plan-card {
-  background: #110726; 
-  border: 1px solid var(--morado); 
+  background: var(--morado-card);
+  border: 1px solid var(--morado);
   border-radius: 50px;
-  padding: 20px; 
-  width: 240px; 
-  box-shadow: 0 0 15px rgba(126, 34, 206, 0.3); 
-  transition: 0.3s;
-}
-.plan-card:hover { 
-  transform: translateY(-5px); 
-}
-.plan-card.destacada { 
-  border-color: var(--cian); 
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); 
-}
-.plan-tipo { 
-  font-size: 0.75rem; 
-  color: var(--cian); 
-  text-transform: uppercase; 
-}
-.precio { 
-  font-size: 2rem; 
-  font-weight: bold; 
-  color: var(--cian); 
-  margin: 6px 0; 
-}
-.precio span { 
-  font-size: 0.8rem; 
-  color: #94a3b8; 
-}
-.plan-card ul { list-style: none; 
-  font-size: 0.85rem; 
-  margin: 10px 0; }
-.plan-card li { 
-  margin-bottom: 6px; 
+  padding: 28px 24px;
+  box-shadow: 0 0 15px rgba(126, 34, 206, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 6. Pie de página */
-footer { 
-  padding: 20px; 
-  font-size: 0.8rem; 
-  color: #64748b; 
-  border-top: 1px solid #1e293b; 
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(126, 34, 206, 0.5);
+}
+
+.plan-card.destacada {
+  border-color: var(--cian);
+  box-shadow: 0 0 22px rgba(0, 240, 255, 0.4);
+}
+
+.plan-card.destacada:hover {
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.65);
+}
+
+.plan-tipo {
+  font-size: 0.8rem;
+  color: var(--cian);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.precio {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--cian);
+  margin: 6px 0;
+}
+
+.precio span {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: normal;
+}
+
+.plan-card ul li {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* 7. Pie de página */
+footer {
+  font-size: 0.85rem;
 }
