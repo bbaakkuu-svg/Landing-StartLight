@@ -10,7 +10,10 @@
   --texto: #f1f5f9;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { 
+  box-sizing: border-box; 
+  margin: 0; padding: 0; 
+}
 
 body {
   font-family: sans-serif;
@@ -62,11 +65,15 @@ nav a {
 }
 
 .btn-nav, .btn-primary, .plan-card.destacada .btn-plan {
-   background: var(--cian); color: #000; 
+   background: var(--cian); 
+   color: #000; 
   }
 
 .btn-plan { 
-  background: var(--morado); color: #fff; width: 100%; margin-top: 10px; 
+  background: var(--morado); 
+  color: #fff; 
+  width: 100%; 
+  margin-top: 10px; 
 }
 
 /* 4. Portada / Hero con orbe central */
@@ -97,13 +104,18 @@ nav a {
 }
 
 .hero-orb h1 { 
-  font-size: 1.6rem; margin-bottom: 8px; 
+  font-size: 1.6rem; 
+  margin-bottom: 8px; 
 }
 .hero-orb p { 
-  font-size: 0.85rem; color: #94a3b8; margin-bottom: 14px; 
+  font-size: 0.85rem; 
+  color: #94a3b8; 
+  margin-bottom: 14px; 
 }
 .status-live { 
-  font-size: 0.75rem; color: #10b981; margin-top: 12px; 
+  font-size: 0.75rem; 
+  color: #10b981; 
+  margin-top: 12px; 
 }
 
 /* 5. Rejilla de planes */
