@@ -1,90 +1,147 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Start Light — Internet Satelital</title>
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- 1. Cabecera y barra de navegación flotante tipo píldora -->
-  <header class="navbar">
-    <div class="logo">
-      <span class="logo-orb"></span>
-      <strong>START<span>LIGHT</span></strong>
-    </div>
-    <nav>
-      <a href="#hero">Inicio</a>
-      <a href="#planes">Planes</a>
-      <a href="#contacto" class="btn-nav">Conectar</a>
+  <!-- 1. Cabecera y barra de navegación responsive tipo píldora -->
+  <header class="container pt-3">
+    <nav class="navbar navbar-expand-md custom-navbar px-3 py-2">
+      <div class="container-fluid px-1">
+        <!-- Logotipo con orbe brillante -->
+        <a class="navbar-brand logo d-flex align-items-center text-light" href="#hero">
+          <span class="logo-orb me-2"></span>
+          <strong>START<span class="text-cyan">LIGHT</span></strong>
+        </a>
+
+        <!-- Botón hamburguesa responsive para móviles -->
+        <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false"
+          aria-label="Abrir navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Enlaces colapsables -->
+        <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+          <ul class="navbar-nav align-items-center gap-2 mt-3 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link text-light px-3" href="#hero">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light px-3" href="#planes">Planes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contacto" class="btn btn-nav">Conectar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
   <!-- 2. Contenido principal -->
   <main>
     <!-- Portada con el orbe/planeta central de Start Light -->
-    <section id="hero" class="hero">
-      <div class="hero-orb">
-        <span class="tag">Constelación LEO • 550 km</span>
-        <h1>Start Light Satelital</h1>
-        <p>Internet de alta velocidad y baja latencia para cualquier rincón del mundo.</p>
-        <a href="#planes" class="btn-primary">Explorar Planes</a>
-        <div class="status-live">● 4.218 Satélites en Línea</div>
+    <section id="hero" class="hero py-5 container text-center">
+      <div class="row justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+          <div class="hero-orb">
+            <span class="tag">Constelación LEO • 550 km</span>
+            <h1 class="h2 fw-bold mt-2 mb-2">Start Light Satelital</h1>
+            <p class="hero-desc px-3">Internet de alta velocidad y baja latencia para cualquier rincón del mundo.</p>
+            <a href="#planes" class="btn btn-primary-custom mt-2">Explorar Planes</a>
+            <div class="status-live mt-3">
+              <i class="bi bi-broadcast me-1"></i>● 4.218 Satélites en Línea
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Sección de Planes y Tarifas -->
-    <section id="planes" class="planes-section">
-      <h2>Planes de Conectividad Global</h2>
-      
-      <div class="planes-grid">
+    <!-- Sección de Planes y Tarifas con Grid responsive de Bootstrap -->
+    <section id="planes" class="planes-section container py-5">
+      <div class="text-center mb-5">
+        <h2 class="display-6 fw-bold">Planes de Conectividad Global</h2>
+        <p class="text-secondary">Elige la velocidad y cobertura que mejor se adapte a tus necesidades</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
         <!-- Tarjeta 1: Residencial -->
-        <article class="plan-card">
-          <span class="plan-tipo">Hogares</span>
-          <h3>Residencial</h3>
-          <p class="precio">49€<span>/mes</span></p>
-          <ul>
-            <li>Velocidad: 150 - 250 Mbps</li>
-            <li>Latencia: 20 - 30 ms</li>
-            <li>Datos ilimitados</li>
-          </ul>
-          <button class="btn-plan">Seleccionar</button>
-        </article>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="plan-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="plan-tipo">Hogares</span>
+              <h3 class="h4 mt-1">Residencial</h3>
+              <p class="precio">49€<span>/mes</span></p>
+              <ul class="list-unstyled text-start mt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-speedometer2 text-cyan me-2"></i>Velocidad: 150 - 250 Mbps</li>
+                <li class="mb-2"><i class="bi bi-activity text-cyan me-2"></i>Latencia: 20 - 30 ms</li>
+                <li class="mb-2"><i class="bi bi-infinity text-cyan me-2"></i>Datos ilimitados</li>
+              </ul>
+            </div>
+            <button class="btn btn-plan">Seleccionar</button>
+          </article>
+        </div>
 
         <!-- Tarjeta 2: Business (Destacado) -->
-        <article class="plan-card destacada">
-          <span class="plan-tipo">Empresas</span>
-          <h3>Business</h3>
-          <p class="precio">149€<span>/mes</span></p>
-          <ul>
-            <li>Velocidad: Hasta 350 Mbps</li>
-            <li>Latencia: 18 ms prioritario</li>
-            <li>IP Fija y soporte 24/7</li>
-          </ul>
-          <button class="btn-plan">Seleccionar</button>
-        </article>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="plan-card destacada h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="plan-tipo">Empresas</span>
+              <h3 class="h4 mt-1">Business</h3>
+              <p class="precio">149€<span>/mes</span></p>
+              <ul class="list-unstyled text-start mt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-lightning-charge-fill text-cyan me-2"></i>Velocidad: Hasta 350 Mbps
+                </li>
+                <li class="mb-2"><i class="bi bi-shield-check text-cyan me-2"></i>Latencia: 18 ms prioritario</li>
+                <li class="mb-2"><i class="bi bi-headset text-cyan me-2"></i>IP Fija y soporte 24/7</li>
+              </ul>
+            </div>
+            <button class="btn btn-plan">Seleccionar</button>
+          </article>
+        </div>
 
         <!-- Tarjeta 3: Itinerante -->
-        <article class="plan-card">
-          <span class="plan-tipo">Movilidad</span>
-          <h3>Itinerante</h3>
-          <p class="precio">89€<span>/mes</span></p>
-          <ul>
-            <li>Velocidad: Hasta 200 Mbps</li>
-            <li>Uso en autocaravanas y mar</li>
-            <li>Pausa de suscripción</li>
-          </ul>
-          <button class="btn-plan">Seleccionar</button>
-        </article>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="plan-card h-100 d-flex flex-column justify-content-between">
+            <div>
+              <span class="plan-tipo">Movilidad</span>
+              <h3 class="h4 mt-1">Itinerante</h3>
+              <p class="precio">89€<span>/mes</span></p>
+              <ul class="list-unstyled text-start mt-3 mb-4">
+                <li class="mb-2"><i class="bi bi-wifi text-cyan me-2"></i>Velocidad: Hasta 200 Mbps</li>
+                <li class="mb-2"><i class="bi bi-compass text-cyan me-2"></i>Uso en autocaravanas y mar</li>
+                <li class="mb-2"><i class="bi bi-pause-circle text-cyan me-2"></i>Pausa de suscripción</li>
+              </ul>
+            </div>
+            <button class="btn btn-plan">Seleccionar</button>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- 3. Pie de página sencillo -->
-  <footer id="contacto">
-    <p>&copy; 2026 Start Light — Proyecto 1º DAW (Lenguajes de Marcas e Interfaces)</p>
+  <footer id="contacto" class="text-center py-4 mt-4 border-top border-dark-subtle">
+    <div class="container">
+      <p class="mb-0 text-secondary">&copy; 2026 Start Light.</p>
+    </div>
   </footer>
 
+  <!-- Bootstrap 5.3.3 JavaScript Bundle con Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
