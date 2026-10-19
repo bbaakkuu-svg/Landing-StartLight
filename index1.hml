@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Light — Internet Satelital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 1. Cabecera y barra de navegación flotante tipo píldora -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-orb"></span>
+      <strong>START<span>LIGHT</span></strong>
+    </div>
+    <nav>
+      <a href="#hero">Inicio</a>
+      <a href="#planes">Planes</a>
+      <a href="#contacto" class="btn-nav">Conectar</a>
+    </nav>
+  </header>
+
+  <!-- 2. Contenido principal -->
+  <main>
+    <!-- Portada con el orbe/planeta central de Start Light -->
+    <section id="hero" class="hero">
+      <div class="hero-orb">
+        <span class="tag">Constelación LEO • 550 km</span>
+        <h1>Start Light Satelital</h1>
+        <p>Internet de alta velocidad y baja latencia para cualquier rincón del mundo.</p>
+        <a href="#planes" class="btn-primary">Explorar Planes</a>
+        <div class="status-live">● 4.218 Satélites en Línea</div>
+      </div>
+    </section>
+
+    <!-- Sección de Planes y Tarifas -->
+    <section id="planes" class="planes-section">
+      <h2>Planes de Conectividad Global</h2>
+      
+      <div class="planes-grid">
+        <!-- Tarjeta 1: Residencial -->
+        <article class="plan-card">
+          <span class="plan-tipo">Hogares</span>
+          <h3>Residencial</h3>
+          <p class="precio">49€<span>/mes</span></p>
+          <ul>
+            <li>Velocidad: 150 - 250 Mbps</li>
+            <li>Latencia: 20 - 30 ms</li>
+            <li>Datos ilimitados</li>
+          </ul>
+          <button class="btn-plan">Seleccionar</button>
+        </article>
+
+        <!-- Tarjeta 2: Business (Destacado) -->
+        <article class="plan-card destacada">
+          <span class="plan-tipo">Empresas</span>
+          <h3>Business</h3>
+          <p class="precio">149€<span>/mes</span></p>
+          <ul>
+            <li>Velocidad: Hasta 350 Mbps</li>
+            <li>Latencia: 18 ms prioritario</li>
+            <li>IP Fija y soporte 24/7</li>
+          </ul>
+          <button class="btn-plan">Seleccionar</button>
+        </article>
+
+        <!-- Tarjeta 3: Itinerante -->
+        <article class="plan-card">
+          <span class="plan-tipo">Movilidad</span>
+          <h3>Itinerante</h3>
+          <p class="precio">89€<span>/mes</span></p>
+          <ul>
+            <li>Velocidad: Hasta 200 Mbps</li>
+            <li>Uso en autocaravanas y mar</li>
+            <li>Pausa de suscripción</li>
+          </ul>
+          <button class="btn-plan">Seleccionar</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- 3. Pie de página sencillo -->
+  <footer id="contacto">
+    <p>&copy; 2026 Start Light</p>
+  </footer>
+
+</body>
+</html>
