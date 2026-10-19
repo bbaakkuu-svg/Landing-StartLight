@@ -37,27 +37,6 @@ body {
   box-shadow: 0 0 18px rgba(0, 240, 255, 0.35);
   transition: all 0.3s ease;
 }
-<<<<<<< HEAD
-=======
-.logo { 
-  display: flex; 
-  align-items: center; 
-  gap: 8px;
-}
-.logo span, nav a:hover { 
-  color: var(--cian); 
-}
-.logo-orb { 
-  width: 12px; height: 12px; 
-  background: var(--cian); 
-  border-radius: 50%; 
-}
-nav a { 
-  color: var(--texto); 
-  text-decoration: none; 
-  margin-left: 15px; 
-}
->>>>>>> ad39700d8c1dc78e69e5b0fd0e61347a90c69d71
 
 .logo-orb {
   display: inline-block;
@@ -91,7 +70,6 @@ nav a {
   border: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-<<<<<<< HEAD
 
 .btn-nav,
 .btn-primary-custom,
@@ -208,107 +186,4 @@ nav a {
 /* 7. Pie de página */
 footer {
   font-size: 0.85rem;
-=======
-
-.btn-nav, .btn-primary, .plan-card.destacada .btn-plan {
-   background: var(--cian); color: #000; 
-  }
-
-.btn-plan { 
-  background: var(--morado); color: #fff; width: 100%; margin-top: 10px; 
-}
-
-/* 4. Portada / Hero con orbe central */
-.hero {
-  display: 
-  flex; justify-content: 
-  center; padding: 40px 20px; 
-}
-.hero-orb {
-  width: 340px; 
-  height: 340px; 
-  border-radius: 50%; 
-  border: 2px solid var(--cian);
-  background: radial-gradient(circle at 35% 30%, #1e3a8a, var(--fondo));
-  box-shadow: 0 0 35px rgba(0, 240, 255, 0.4);
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center; 
-  padding: 20px;
-}
-.tag { 
-  font-size: 0.8rem; 
-  color: var(--cian); 
-  border: 1px solid var(--cian); 
-  padding: 2px 8px; border-radius: 10px; 
-  margin-bottom: 8px; 
-}
-
-.hero-orb h1 { 
-  font-size: 1.6rem; margin-bottom: 8px; 
-}
-.hero-orb p { 
-  font-size: 0.85rem; color: #94a3b8; margin-bottom: 14px; 
-}
-.status-live { 
-  font-size: 0.75rem; color: #10b981; margin-top: 12px; 
-}
-
-/* 5. Rejilla de planes */
-.planes-section { 
-  padding: 30px 20px; 
-}
-.planes-grid { 
-  display: flex; 
-  justify-content: center; 
-  gap: 20px; 
-  flex-wrap: wrap; 
-  margin-top: 20px; 
-}
-.plan-card {
-  background: #110726; 
-  border: 1px solid var(--morado); 
-  border-radius: 50px;
-  padding: 20px; 
-  width: 240px; 
-  box-shadow: 0 0 15px rgba(126, 34, 206, 0.3); 
-  transition: 0.3s;
-}
-.plan-card:hover { 
-  transform: translateY(-5px); 
-}
-.plan-card.destacada { 
-  border-color: var(--cian); 
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4); 
-}
-.plan-tipo { 
-  font-size: 0.75rem; 
-  color: var(--cian); 
-  text-transform: uppercase; 
-}
-.precio { 
-  font-size: 2rem; 
-  font-weight: bold; 
-  color: var(--cian); 
-  margin: 6px 0; 
-}
-.precio span { 
-  font-size: 0.8rem; 
-  color: #94a3b8; 
-}
-.plan-card ul { list-style: none; 
-  font-size: 0.85rem; 
-  margin: 10px 0; }
-.plan-card li { 
-  margin-bottom: 6px; 
-}
-
-/* 6. Pie de página */
-footer { 
-  padding: 20px; 
-  font-size: 0.8rem; 
-  color: #64748b; 
-  border-top: 1px solid #1e293b; 
->>>>>>> ad39700d8c1dc78e69e5b0fd0e61347a90c69d71
 }
